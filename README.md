@@ -12,7 +12,7 @@ This interactive web application visualizes earthquake vulnerability and resilie
 - **Responsive Charts**: Bar and radar chart visualizations of all resilience metrics
 - **User-Friendly Interface**: Simple navigation with clear data presentation
 
-## Live Demo
+## App
 
 You can explore the live dashboard at [https://kvu01124.github.io/earthquake_resilience_dashboard/](https://kvu01124.github.io/earthquake_resilience_dashboard/)
 
