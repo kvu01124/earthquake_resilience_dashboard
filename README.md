@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Community Earthquake Resilience Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This interactive web application visualizes earthquake vulnerability and resilience metrics across different communities. The dashboard provides a comprehensive view of multiple factors that contribute to earthquake preparedness, including building age, healthcare accessibility, and communication infrastructure.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Interactive Map**: Color-coded visualization of different resilience metrics
+- **Multiple Metrics**: View various normalized vulnerability indexes (0-1 scale)
+- **Detailed Analysis**: Click on regions to view comprehensive data breakdowns
+- **Responsive Charts**: Bar and radar chart visualizations of all resilience metrics
+- **User-Friendly Interface**: Simple navigation with clear data presentation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can explore the live dashboard at [https://kvu01124.github.io/earthquake_resilience_dashboard/](https://kvu01124.github.io/earthquake_resilience_dashboard/)
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- Leaflet for interactive mapping
+- Recharts for data visualization
+- GeoJSON for spatial data representation
 
-### `npm run build`
+## Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kvu01124/earthquake_resilience_dashboard.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
+   ```bash
+   cd earthquake_resilience_dashboard
+   ```
 
-### `npm run eject`
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Data Sources
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The dashboard uses normalized data across several metrics:
+- Earthquake Vulnerability Index
+- Age Demographics
+- Building Age
+- Urgent Care Accessibility
+- Hospital Accessibility
+- Housing Suitability
+- Communication Barrier
 
-## Learn More
+All data is represented on a 0 to 1 scale for easy comparison, with higher values indicating better resilience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To deploy this project to GitHub Pages:
 
-### Code Splitting
+1. Install GitHub Pages package:
+   ```bash
+   npm install --save gh-pages
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Add the following to your `package.json`:
+   ```json
+   "homepage": "https://yourname.github.io/yourrepository",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
 
-### Analyzing the Bundle Size
+3. Deploy the application:
+   ```bash
+   npm run deploy
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
