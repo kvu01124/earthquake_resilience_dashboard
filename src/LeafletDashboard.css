@@ -1,0 +1,368 @@
+/* LeafletDashboard.css - Dark & Green Theme for Earthquake Vulnerability Map */
+
+/* Root Variables: Define theme colors and common styling values */
+:root {
+    --dark-bg: #1e2124; /* Page background */
+    --darker-bg: #121416; /* Container background */
+    --card-bg: #2c2f33; /* Card components */
+    --primary-green: #4caf50; /* Primary accent color */
+    --light-green: #81c784; /* Highlighted text */
+    --dark-green: #2e7d32; /* Scrollbar thumb and dark accents */
+    --text-light: #e0e0e0; /* Main text color */
+    --text-dim: #a0a0a0; /* Secondary text color */
+    --border-radius: 8px; /* Consistent border radius */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Card and popup shadow */
+  }
+  
+  /* Global Styles */
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .App {
+    background-color: var(--darker-bg);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main Layout Containers */
+  .leaflet-dashboard {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background-color: var(--darker-bg);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .map-container, .chart-container {
+    flex: 1;
+    height: calc(100vh - 40px);
+    min-height: 600px;
+  }
+  
+  /* Card Layouts for Map and Charts */
+  .map-card, .chart-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 16px;
+    height: 100%;
+    border-top: 3px solid var(--primary-green);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .map-card h2, .chart-card h2 {
+    font-size: 24px;
+    color: var(--primary-green);
+    font-weight: 600;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #3a3a3a;
+    padding-bottom: 10px;
+  }
+  
+  /* Control Panels (Dropdowns, Selects) */
+  .control-panel, .chart-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .select-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .select-container label,
+  .chart-controls label {
+    margin-right: 10px;
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  /* Dropdown Styles */
+  .metric-select, .chart-type-select {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 180px;
+  }
+  
+  .metric-select:focus, .chart-type-select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+  }
+  
+  .metric-select option, .chart-type-select option {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+  }
+  
+  /* Map Container */
+  .map {
+    width: 100%;
+    flex-grow: 1;
+    min-height: 500px;
+    border-radius: 4px;
+    border: 1px solid #3a3a3a;
+    overflow: hidden;
+  }
+  
+  /* Custom Leaflet Map Styles */
+  .leaflet-container {
+    background-color: #263238 !important;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background-color: var(--card-bg) !important;
+    color: var(--text-light) !important;
+    box-shadow: var(--box-shadow) !important;
+  }
+  
+  .leaflet-control-zoom a {
+    background-color: var(--card-bg) !important;
+    color: var(--primary-green) !important;
+    border-color: #3a3a3a !important;
+  }
+  
+  .leaflet-control-zoom a:hover {
+    background-color: var(--dark-bg) !important;
+  }
+  
+  /* Map Legend and Info Box */
+  .info, .legend {
+    background: var(--card-bg);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    color: var(--text-light);
+  }
+  
+  .info h4, .legend h4 {
+    margin: 0 0 5px;
+    font-size: 14px;
+    color: var(--primary-green);
+  }
+  
+  .legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+    border-radius: 2px;
+  }
+  
+  /* Region Info Box */
+  .region-info {
+    margin-bottom: 20px;
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 16px;
+    border-radius: 4px;
+    border-left: 3px solid var(--primary-green);
+    font-size: 16px;
+  }
+  
+  .region-name {
+    font-weight: 600;
+    color: var(--light-green);
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  /* Chart Section Layout */
+  .chart-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chart {
+    flex-grow: 1;
+    min-height: 400px;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Popup Styling */
+  .popup-content {
+    padding: 5px;
+  }
+  
+  .popup-content h3 {
+    margin: 0 0 10px 0;
+    color: var(--primary-green);
+    font-size: 16px;
+  }
+  
+  .popup-content p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Recharts Custom Styling */
+  .recharts-surface {
+    border-radius: 4px;
+  }
+  
+  .recharts-default-tooltip {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--primary-green) !important;
+    border-radius: 4px !important;
+  }
+  
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    stroke: #3a3a3a !important;
+  }
+  
+  .recharts-text {
+    fill: var(--text-dim) !important;
+    font-size: 12px !important;
+  }
+  
+  .recharts-legend-item-text {
+    color: var(--text-light) !important;
+  }
+  
+  .recharts-polar-grid-angle line,
+  .recharts-polar-grid-concentric circle {
+    stroke: #3a3a3a !important;
+  }
+  
+  .recharts-radar-polygon {
+    fill: var(--primary-green) !important;
+    fill-opacity: 0.6 !important;
+    stroke: var(--primary-green) !important;
+  }
+  
+  .recharts-radar-curve {
+    stroke: var(--primary-green) !important;
+  }
+  
+  /* Loading / Error / No Data States */
+  .loading, .error, .no-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .loading {
+    color: var(--text-dim);
+    font-size: 18px;
+  }
+  
+  .error {
+    color: #e57373;
+    font-size: 18px;
+  }
+  
+  .no-selection {
+    color: var(--text-dim);
+    flex-direction: column;
+    font-size: 18px;
+  }
+  
+  .no-selection p {
+    margin-bottom: 15px;
+  }
+  
+  .no-selection::before {
+    content: '📌';
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  
+  /* Custom Tooltip */
+  .custom-tooltip {
+    background-color: var(--card-bg);
+    border: 1px solid var(--primary-green);
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .custom-tooltip .label {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Custom Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--dark-green);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-green);
+  }
+  
+  /* Responsive Design Adjustments */
+  @media (max-width: 1200px) {
+    /* Stack map and chart vertically instead of side by side */
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    /* Allow containers to shrink in height on smaller screens */
+    .map-container, .chart-container {
+      height: auto;
+      min-height: auto;
+    }
+  
+    /* Cards adjust height for vertical layout */
+    .map-card, .chart-card {
+      height: auto;
+    }
+  
+    /* Fixed height for map to ensure usability on smaller screens */
+    .map {
+      height: 500px;
+    }
+  
+    /* Fixed height for chart area as well */
+    .chart {
+      height: 400px;
+    }
+  }
+  
+  
+  
