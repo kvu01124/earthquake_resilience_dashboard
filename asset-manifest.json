@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/earthquake_resilience_dashboard/static/css/main.beb00ed2.css",
+    "main.js": "/earthquake_resilience_dashboard/static/js/main.5f82e80c.js",
+    "static/js/453.68af1b00.chunk.js": "/earthquake_resilience_dashboard/static/js/453.68af1b00.chunk.js",
+    "index.html": "/earthquake_resilience_dashboard/index.html",
+    "main.beb00ed2.css.map": "/earthquake_resilience_dashboard/static/css/main.beb00ed2.css.map",
+    "main.5f82e80c.js.map": "/earthquake_resilience_dashboard/static/js/main.5f82e80c.js.map",
+    "453.68af1b00.chunk.js.map": "/earthquake_resilience_dashboard/static/js/453.68af1b00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.beb00ed2.css",
+    "static/js/main.5f82e80c.js"
+  ]
+}
