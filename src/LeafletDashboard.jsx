@@ -177,7 +177,7 @@ const LeafletDashboard = () => {
         console.log("Attempting to load GeoJSON...");
 
         // Fetch GeoJSON data
-        fetch('/data/map-data.geojson')
+        fetch('/earthquake_resilience_dashboard/data/map-data.geojson')
           .then(response => {
             if (!response.ok) {
               throw new Error(`File not found or network error: ${response.status}`);
